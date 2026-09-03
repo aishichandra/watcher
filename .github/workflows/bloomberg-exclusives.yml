@@ -5,6 +5,11 @@ on:
     # Every 5 minutes (GitHub's minimum cron granularity). GitHub runs cron on a
     # best-effort basis, so expect drift and the occasional skipped/coalesced slot
     # when the hosted runners are busy — see README's Timing/Caveats sections.
+    #
+    # Note: on a brand-new repo, GitHub can take anywhere from ~15 min up to a
+    # few hours (rarely longer) to start actually firing this trigger, even
+    # though the schedule is registered and workflow_dispatch works fine in
+    # the meantime. Re-pushing this file is a known nudge to speed that up.
     - cron: '*/5 * * * *'
   workflow_dispatch:
     inputs:
