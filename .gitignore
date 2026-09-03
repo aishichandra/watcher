@@ -1,0 +1,9 @@
+.env
+__pycache__/
+*.pyc
+.venv/
+.DS_Store
+
+# Scratch output from the notebook, not part of the automation.
+bloomberg_latest.csv
+scraped.csv
